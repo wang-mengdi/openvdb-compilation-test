@@ -1,6 +1,8 @@
 {
     cmdlines = {
         "xmake build -v -P src openvdb-compilation-test",
-        [[xmake lua C:\Users\wmdcs\xmake\actions\build\statistics.lua --project=src --verbose]]
+        [[xmake lua C:\Users\wmdcs\xmake\actions\build\statistics.lua --project=src --verbose]],
+        [[xmake f -o ..\bin -P src -y]],
+        "xmake build -v -P src openvdb-compilation-test"
     }
 }

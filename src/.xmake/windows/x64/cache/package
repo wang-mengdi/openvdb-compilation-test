@@ -1,66 +1,6 @@
 {
-    gtest = {
-        linkdirs = [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\lib]],
-        version = "1.12.1",
-        sysincludedirs = [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\include]],
-        links = {
-            "gmock",
-            "gtest",
-            "gtest_main"
-        },
-        __requirestr = "gtest",
-        __enabled = true,
-        static = true,
-        libfiles = {
-            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\lib\gmock.lib]],
-            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\lib\gtest.lib]],
-            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\lib\gtest_main.lib]]
-        },
-        __installdir = [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138]],
-        envs = {
-            PATH = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\bin]]
-            }
-        }
-    },
-    cuda = {
-        sysincludedirs = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include]],
-        links = {
-            "cublas",
-            "cusparse",
-            "cusolver",
-            "cudart_static"
-        },
-        __requirestr = "cuda",
-        __enabled = true,
-        __extrainfo = {
-            configs = {
-                utils = {
-                    "cublas",
-                    "cusparse",
-                    "cusolver",
-                    "cudart_static"
-                },
-                vs_runtime = "MT"
-            },
-            system = true
-        },
-        linkdirs = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64]],
-        envs = {
-            PATH = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\c\cuda\latest\eafa6fe6c833411caffeb722817b1efc\bin]],
-                [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin]]
-            }
-        }
-    },
     openvdb = {
-        linkdirs = {
-            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\lib]],
-            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib]],
-            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\lib]],
-            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\lib]],
-            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\lib]]
-        },
+        static = true,
         __extrainfo = {
             configs = {
                 nanovdb = false,
@@ -68,7 +8,8 @@
             }
         },
         version = "9.1.0",
-        static = true,
+        __requirestr = "openvdb =9.1.0",
+        __enabled = true,
         sysincludedirs = {
             [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\include]],
             [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\include]],
@@ -76,40 +17,6 @@
             [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\include]],
             [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\include]]
         },
-        links = {
-            "libopenvdb",
-            "libboost_regex-mt-s",
-            "libboost_system-mt-s",
-            "libboost_atomic-mt-s",
-            "libboost_iostreams-mt-s",
-            "libboost_filesystem-mt-s",
-            "libblosc",
-            "zlib",
-            "tbb",
-            "tbbmalloc",
-            "tbbmalloc_proxy"
-        },
-        __requirestr = "openvdb =9.1.0",
-        __enabled = true,
-        defines = {
-            "OPENVDB_STATICLIB",
-            "_USE_MATH_DEFINES",
-            "NOMINMAX",
-            "BOOST_ALL_NO_LIB"
-        },
-        envs = {
-            PATH = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\bin]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\bin]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\c\cmake\3.24.1\071998414ffe4b808b46ac97cd886ed2\bin]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\bin]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\bin]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\bin]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin]]
-            }
-        },
-        __installdir = [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319]],
         libfiles = {
             [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\lib\libopenvdb.lib]],
             [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_regex-mt-s.lib]],
@@ -133,6 +40,45 @@
             [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin\tbb12.dll]],
             [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin\tbbmalloc.dll]],
             [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin\tbbmalloc_proxy.dll]]
+        },
+        linkdirs = {
+            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\lib]],
+            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib]],
+            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\lib]],
+            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\lib]],
+            [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\lib]]
+        },
+        defines = {
+            "OPENVDB_STATICLIB",
+            "_USE_MATH_DEFINES",
+            "NOMINMAX",
+            "BOOST_ALL_NO_LIB"
+        },
+        __installdir = [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319]],
+        links = {
+            "libopenvdb",
+            "libboost_regex-mt-s",
+            "libboost_system-mt-s",
+            "libboost_atomic-mt-s",
+            "libboost_iostreams-mt-s",
+            "libboost_filesystem-mt-s",
+            "libblosc",
+            "zlib",
+            "tbb",
+            "tbbmalloc",
+            "tbbmalloc_proxy"
+        },
+        envs = {
+            PATH = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\bin]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\bin]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\c\cmake\3.24.1\071998414ffe4b808b46ac97cd886ed2\bin]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\bin]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\bin]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\bin]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin]]
+            }
         }
     }
 }

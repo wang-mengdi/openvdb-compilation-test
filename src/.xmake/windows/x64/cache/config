@@ -1,9 +1,9 @@
 {
     recheck = false,
-    mtimes = {
-        ["xmake.lua"] = 1663131073
-    },
     options = {
         buildir = [[..\bin]]
+    },
+    mtimes = {
+        ["xmake.lua"] = 1663131482
     }
 }

@@ -1,54 +1,128 @@
 {
-    find_program = {
-        gdc = false,
-        ping = "ping",
-        ldc2 = false,
-        ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc"] = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin\nvcc]],
-        git = "git",
-        dmd = false,
-        gzip = "gzip",
-        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\cl.exe]],
-        tar = "tar",
-        unzip = "unzip",
-        ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc"] = false,
-        zig = false
+    find_programver_fetch_package_system = {
+        ["C:\\Program Files\\CMake\\bin\\cmake"] = "3.21.3"
     },
-    ["lib.detect.has_flags"] = {
-        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-gencode arch=compute_61,code=compute_61"] = true,
-        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-Xcompiler /bigobj"] = true,
-        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-extended-lambda --std c++17"] = true,
-        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-MD -MF"] = true,
-        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu___-O3"] = true,
-        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-gencode arch=compute_86,code=sm_86"] = true,
-        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-rdc=true"] = true,
-        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_culd_culdflags__-gencode arch=compute_86,code=sm_86"] = true,
-        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_culd_culdflags__-gencode arch=compute_61,code=compute_61"] = true
+    find_program_fetch_package_system = {
+        cmake = [[C:\Program Files\CMake\bin\cmake]]
     },
     find_program_fetch_package_xmake = {
         cmake = [[C:\Program Files\CMake\bin\cmake]]
     },
-    find_programver = {
-        ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc"] = "11.7",
-        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe"] = false
+    ["detect.sdks.find_cuda"] = {
+        cuda = {
+            bindir = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin]],
+            msbuildextensionsdir = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\extras\visual_studio_integration\MSBuildExtensions]],
+            includedirs = {
+                [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include]]
+            },
+            version = "11.7",
+            sdkdir = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7]],
+            linkdirs = {
+                [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64]]
+            }
+        }
     },
     find_program_cuda_arch_x64_plat_windows_checktoolcu = {
         ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc"] = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin\nvcc]]
     },
+    find_programver = {
+        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe"] = false,
+        ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc"] = "11.7"
+    },
+    find_program = {
+        tar = "tar",
+        zig = false,
+        git = "git",
+        ldc2 = false,
+        gzip = "gzip",
+        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\cl.exe]],
+        ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc"] = false,
+        ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc"] = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin\nvcc]],
+        unzip = "unzip",
+        gdc = false,
+        dmd = false
+    },
     find_cudadevices = {
+        succeed = true,
         data = {
             {
-                maxSurfaceCubemap = 32768,
-                canMapHostMemory = true,
-                cooperativeMultiDeviceLaunch = false,
-                managedMemory = true,
-                maxTextureCubemap = 32768,
-                maxTexture2DMipmap = {
-                    32768,
-                    32768
+                streamPrioritiesSupported = true,
+                regsPerBlock = 65536,
+                isMultiGpuBoard = false,
+                texturePitchAlignment = 32,
+                maxTexture2D = {
+                    131072,
+                    65536
                 },
+                maxTexture2DLinear = {
+                    131072,
+                    65000,
+                    2097120
+                },
+                tccDriver = false,
+                pciDomainID = 0,
+                surfaceAlignment = 512,
                 maxTexture3DAlt = {
                     8192,
                     8192,
+                    32768
+                },
+                maxTexture1DLinear = 268435456,
+                memoryClockRate = 9501000,
+                localL1CacheSupported = true,
+                multiProcessorCount = 68,
+                maxSurface1DLayered = {
+                    32768,
+                    2048
+                },
+                maxTextureCubemap = 32768,
+                maxThreadsPerBlock = 1024,
+                maxThreadsDim = {
+                    1024,
+                    1024,
+                    64
+                },
+                textureAlignment = 512,
+                maxTexture3D = {
+                    16384,
+                    16384,
+                    16384
+                },
+                computeMode = 0,
+                maxTexture1DMipmap = 32768,
+                maxSurface2DLayered = {
+                    32768,
+                    32768,
+                    2048
+                },
+                memoryBusWidth = 320,
+                integrated = false,
+                ["$flops"] = 14883840000,
+                maxSurface2D = {
+                    131072,
+                    65536
+                },
+                ["$id"] = 0,
+                sharedMemPerMultiprocessor = 102400,
+                ECCEnabled = false,
+                maxTexture1DLayered = {
+                    32768,
+                    2048
+                },
+                concurrentManagedAccess = false,
+                deviceOverlap = true,
+                totalConstMem = 65536,
+                pciBusID = 4,
+                maxSurfaceCubemapLayered = {
+                    32768,
+                    2046
+                },
+                regsPerMultiprocessor = 65536,
+                sharedMemPerBlock = 49152,
+                warpSize = 32,
+                maxSurface1D = 32768,
+                maxTexture2DMipmap = {
+                    32768,
                     32768
                 },
                 maxSurface3D = {
@@ -56,173 +130,215 @@
                     16384,
                     16384
                 },
-                memoryClockRate = 9501000,
-                asyncEngineCount = 5,
-                totalConstMem = 65536,
-                streamPrioritiesSupported = true,
+                pciDeviceID = 0,
+                pageableMemoryAccess = false,
+                cooperativeLaunch = true,
                 singleToDoublePrecisionPerfRatio = 32,
+                asyncEngineCount = 5,
+                maxThreadsPerMultiProcessor = 1536,
+                name = "NVIDIA GeForce RTX 3080",
+                cooperativeMultiDeviceLaunch = false,
+                managedMemory = true,
+                canMapHostMemory = true,
+                luidDeviceNodeMask = 1,
+                computePreemptionSupported = true,
+                minor = 6,
+                l2CacheSize = 5242880,
+                luid = "3c02010000000000",
                 maxTexture2DLayered = {
                     32768,
                     32768,
                     2048
                 },
-                globalL1CacheSupported = true,
+                maxSurfaceCubemap = 32768,
                 maxGridSize = {
                     2147483647,
                     65535,
                     65535
                 },
-                luid = "3c02010000000000",
-                maxTexture1D = 131072,
-                multiProcessorCount = 68,
-                luidDeviceNodeMask = 1,
-                pageableMemoryAccess = false,
-                maxTexture1DLayered = {
-                    32768,
-                    2048
-                },
-                maxThreadsPerBlock = 1024,
-                maxSurface1D = 32768,
-                regsPerMultiprocessor = 65536,
-                pciDeviceID = 0,
-                maxThreadsDim = {
-                    1024,
-                    1024,
-                    64
-                },
-                pciDomainID = 0,
                 uuid = "5c575dc6-15f5-9216-0d2a-ea00105f9fdf",
-                warpSize = 32,
-                tccDriver = false,
-                concurrentKernels = true,
-                ["$id"] = 0,
-                totalGlobalMem = 10736893952,
-                maxSurface2D = {
-                    131072,
-                    65536
-                },
-                surfaceAlignment = 512,
-                pciBusID = 4,
-                sharedMemPerBlockOptin = 101376,
-                computePreemptionSupported = true,
-                canUseHostPointerForRegisteredMem = false,
-                unifiedAddressing = true,
-                ["$flops"] = 14883840000,
-                maxSurface1DLayered = {
-                    32768,
-                    2048
-                },
-                texturePitchAlignment = 32,
-                memPitch = 2147483647,
-                computeMode = 0,
-                maxTextureCubemapLayered = {
-                    32768,
-                    2046
-                },
-                isMultiGpuBoard = false,
+                kernelExecTimeoutEnabled = true,
                 directManagedMemAccessFromHost = false,
-                integrated = false,
-                maxTexture2DLinear = {
-                    131072,
-                    65000,
-                    2097120
-                },
-                ECCEnabled = false,
-                multiGpuBoardGroupID = 0,
-                maxTexture3D = {
-                    16384,
-                    16384,
-                    16384
-                },
-                maxTexture2D = {
-                    131072,
-                    65536
-                },
-                sharedMemPerBlock = 49152,
-                memoryBusWidth = 320,
-                concurrentManagedAccess = false,
-                major = 8,
-                maxSurface2DLayered = {
-                    32768,
-                    32768,
-                    2048
-                },
+                clockRate = 1710000,
                 maxTexture2DGather = {
                     32768,
                     32768
                 },
-                sharedMemPerMultiprocessor = 102400,
-                localL1CacheSupported = true,
-                textureAlignment = 512,
-                maxTexture1DLinear = 268435456,
-                cooperativeLaunch = true,
-                kernelExecTimeoutEnabled = true,
-                maxThreadsPerMultiProcessor = 1536,
-                regsPerBlock = 65536,
-                name = "NVIDIA GeForce RTX 3080",
-                pageableMemoryAccessUsesHostPageTables = false,
-                l2CacheSize = 5242880,
-                maxTexture1DMipmap = 32768,
-                deviceOverlap = true,
-                maxSurfaceCubemapLayered = {
+                memPitch = 2147483647,
+                canUseHostPointerForRegisteredMem = false,
+                concurrentKernels = true,
+                maxTextureCubemapLayered = {
                     32768,
                     2046
                 },
-                minor = 6,
-                clockRate = 1710000
+                maxTexture1D = 131072,
+                globalL1CacheSupported = true,
+                unifiedAddressing = true,
+                totalGlobalMem = 10736893952,
+                major = 8,
+                pageableMemoryAccessUsesHostPageTables = false,
+                multiGpuBoardGroupID = 0,
+                sharedMemPerBlockOptin = 101376
             }
-        },
-        succeed = true
-    },
-    ["detect.sdks.find_cuda"] = {
-        cuda = {
-            version = "11.7",
-            msbuildextensionsdir = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\extras\visual_studio_integration\MSBuildExtensions]],
-            includedirs = {
-                [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include]]
-            },
-            linkdirs = {
-                [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64]]
-            },
-            sdkdir = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7]],
-            bindir = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin]]
         }
-    },
-    find_program_msvc_arch_x64_plat_windows_checktoolld = {
-        ["link.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\link.exe]]
     },
     find_program_cuda_arch_x64_plat_windows_checktoolculd = {
         ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc"] = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin\nvcc]]
     },
+    find_program_msvc_arch_x64_plat_windows_checktoolld = {
+        ["link.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\link.exe]]
+    },
+    ["lib.detect.has_flags"] = {
+        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-Xcompiler /bigobj"] = true,
+        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-gencode arch=compute_86,code=sm_86"] = true,
+        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-rdc=true"] = true,
+        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-MD -MF"] = true,
+        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-extended-lambda --std c++17"] = true,
+        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_culd_culdflags__-gencode arch=compute_86,code=sm_86"] = true,
+        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_culd_culdflags__-gencode arch=compute_61,code=compute_61"] = true,
+        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu___-O3"] = true,
+        ["windows_x64_C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7_cu_cuflags__-gencode arch=compute_61,code=compute_61"] = true
+    },
+    ["detect.tools.nvcc.has_flags"] = {
+        ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7"] = {
+            ["--save-temps"] = true,
+            ["--extra-device-vectorization"] = true,
+            ["--relocatable-device-code"] = true,
+            ["--display-error-number"] = true,
+            ["--ptxas-options"] = true,
+            ["--prec-sqrt"] = true,
+            ["--diag-suppress"] = true,
+            ["--archiver-binary"] = true,
+            ["--ptx"] = true,
+            ["--include-path"] = true,
+            ["--generate-dependency-targets"] = true,
+            ["--Wno-deprecated-gpu-targets"] = true,
+            ["--list-gpu-code"] = true,
+            ["--system-include"] = true,
+            ["--preprocess"] = true,
+            ["-dc"] = true,
+            ["--run-args"] = true,
+            ["--options-file"] = true,
+            ["--extensible-whole-program"] = true,
+            ["--time"] = true,
+            ["-lineinfo"] = true,
+            ["--Wext-lambda-captures-this"] = true,
+            ["--undefine-macro"] = true,
+            ["--compile"] = true,
+            ["--forward-unknown-opts"] = true,
+            ["--Wno-deprecated-declarations"] = true,
+            ["--ftemplate-depth"] = true,
+            ["--libdevice-directory"] = true,
+            ["--Werror"] = true,
+            ["--fmad"] = true,
+            ["--generate-code"] = true,
+            ["--clean-targets"] = true,
+            ["--device-debug"] = true,
+            ["--ftz"] = true,
+            ["--target-directory"] = true,
+            ["-forward-unknown-to-host-linker"] = true,
+            ["--optimization-info"] = true,
+            ["--generate-line-info"] = true,
+            ["--Wreorder"] = true,
+            ["--run"] = true,
+            ["--version"] = true,
+            ["--device-w"] = true,
+            ["--expt-extended-lambda"] = true,
+            ["--verbose"] = true,
+            ["--Wdefault-stream-launch"] = true,
+            ["--no-compress"] = true,
+            ["--compiler-options"] = true,
+            ["--lto"] = true,
+            ["--default-stream"] = true,
+            ["--disable-warnings"] = true,
+            ["--dopt"] = true,
+            ["--optix-ir"] = true,
+            ["-gencode"] = true,
+            ["--library-path"] = true,
+            ["-code"] = true,
+            ["--Wmissing-launch-bounds"] = true,
+            ["--no-exceptions"] = true,
+            ["--generate-dependencies-with-compile"] = true,
+            ["--fatbin"] = true,
+            ["--archive-options"] = true,
+            ["--generate-dependencies"] = true,
+            ["--objdir-as-tempdir"] = true,
+            ["--use-local-env"] = true,
+            ["--dependency-target-name"] = true,
+            ["--list-gpu-arch"] = true,
+            ["--threads"] = true,
+            ["--machine"] = true,
+            ["--dependency-output"] = true,
+            ["--drive-prefix"] = true,
+            ["-forward-unknown-opts"] = true,
+            ["--library"] = true,
+            ["--link"] = true,
+            ["--no-align-double"] = true,
+            ["--cubin"] = true,
+            ["-o"] = true,
+            ["--profile"] = true,
+            ["--diag-error"] = true,
+            ["--nvlink-options"] = true,
+            ["--std"] = true,
+            ["--resource-usage"] = true,
+            ["--define-macro"] = true,
+            ["--forward-unknown-to-host-compiler"] = true,
+            ["--restrict"] = true,
+            ["--x"] = true,
+            ["--debug"] = true,
+            ["--pre-include"] = true,
+            ["-dw"] = true,
+            ["--no-host-device-move-forward"] = true,
+            ["-arch"] = true,
+            ["--compiler-bindir"] = true,
+            ["--source-in-ptx"] = true,
+            ["--device-c"] = true,
+            ["--dont-use-profile"] = true,
+            ["--allow-unsupported-compiler"] = true,
+            ["--maxrregcount"] = true,
+            ["--ftemplate-backtrace-limit"] = true,
+            ["--prec-div"] = true,
+            ["--keep"] = true,
+            ["--shared"] = true,
+            ["--linker-options"] = true,
+            ["--output-directory"] = true,
+            ["--dependency-drive-prefix"] = true,
+            ["-forward-unknown-to-host-compiler"] = true,
+            ["--no-host-device-initializer-list"] = true,
+            ["--version-ident"] = true,
+            ["--device-link"] = true,
+            ["--optimize"] = true,
+            ["--no-device-link"] = true,
+            ["--lib"] = true,
+            ["--dlink-time-opt"] = true,
+            ["--keep-device-functions"] = true,
+            ["--entries"] = true,
+            ["--expt-relaxed-constexpr"] = true,
+            ["--input-drive-prefix"] = true,
+            ["--m64"] = true,
+            ["--gpu-code"] = true,
+            ["--cudart"] = true,
+            ["--no-display-error-number"] = true,
+            ["--cudadevrt"] = true,
+            ["--compile-as-tools-patch"] = true,
+            ["--m32"] = true,
+            ["--help"] = true,
+            ["--gpu-architecture"] = true,
+            ["-bar"] = true,
+            ["--forward-unknown-to-host-linker"] = true,
+            ["--cuda"] = true,
+            ["-dlink"] = true,
+            ["-MF"] = true,
+            ["--diag-warn"] = true,
+            ["--extended-lambda"] = true,
+            ["--output-file"] = true,
+            ["--keep-dir"] = true,
+            ["--dryrun"] = true,
+            ["-dlto"] = true
+        }
+    },
     find_package_windows_x64_fetch_package_xmake = {
-        ["xmake::openvdb_6cef3021b4494e1aa70558c858b51319_release_9.1.0_external"] = {
-            version = "9.1.0",
-            links = {
-                "libopenvdb"
-            },
-            sysincludedirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\include]]
-            },
-            static = true,
-            linkdirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\lib]]
-            },
-            defines = {
-                "OPENVDB_STATICLIB",
-                "_USE_MATH_DEFINES",
-                "NOMINMAX"
-            },
-            libfiles = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\lib\libopenvdb.lib]]
-            }
-        },
         ["xmake::tbb_d934348e0f82466eac79e32c23f5f846_release_2021.5.0_external"] = {
-            sysincludedirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\include]]
-            },
-            linkdirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\lib]]
-            },
             links = {
                 "tbb",
                 "tbbmalloc",
@@ -235,15 +351,73 @@
                 [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin\tbb12.dll]],
                 [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin\tbbmalloc.dll]],
                 [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\bin\tbbmalloc_proxy.dll]]
+            },
+            sysincludedirs = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\include]]
+            },
+            linkdirs = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\t\tbb\2021.5.0\d934348e0f82466eac79e32c23f5f846\lib]]
+            }
+        },
+        ["xmake::openvdb_6cef3021b4494e1aa70558c858b51319_release_9.1.0_external"] = {
+            links = {
+                "libopenvdb"
+            },
+            sysincludedirs = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\include]]
+            },
+            version = "9.1.0",
+            static = true,
+            linkdirs = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\lib]]
+            },
+            libfiles = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\o\openvdb\9.1.0\6cef3021b4494e1aa70558c858b51319\lib\libopenvdb.lib]]
+            },
+            defines = {
+                "OPENVDB_STATICLIB",
+                "_USE_MATH_DEFINES",
+                "NOMINMAX"
+            }
+        },
+        ["xmake::zlib_b5ea843dabd742168c9611e216a46175_release_v1.2.12_external"] = {
+            links = {
+                "zlib"
+            },
+            libfiles = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\lib\zlib.lib]]
+            },
+            sysincludedirs = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\include]]
+            },
+            linkdirs = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\lib]]
+            }
+        },
+        ["xmake::boost_2b54c318908f4900a07f01731c1ce602_release_1.79.0_external"] = {
+            links = {
+                "libboost_regex-mt-s",
+                "libboost_system-mt-s",
+                "libboost_atomic-mt-s",
+                "libboost_iostreams-mt-s",
+                "libboost_filesystem-mt-s"
+            },
+            sysincludedirs = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\include]]
+            },
+            defines = "BOOST_ALL_NO_LIB",
+            libfiles = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_regex-mt-s.lib]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_system-mt-s.lib]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_atomic-mt-s.lib]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_iostreams-mt-s.lib]],
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_filesystem-mt-s.lib]]
+            },
+            linkdirs = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib]]
             }
         },
         ["xmake::blosc_8c39e21c84434beab4f86cf9fbd34f9e_release_1.21.1_external"] = {
-            sysincludedirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\include]]
-            },
-            linkdirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\lib]]
-            },
             links = {
                 "libblosc"
             },
@@ -257,211 +431,16 @@
                 [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\bin\msvcp140_codecvt_ids.dll]],
                 [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\bin\vcruntime140.dll]],
                 [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\bin\vcruntime140_1.dll]]
-            }
-        },
-        ["xmake::zlib_b5ea843dabd742168c9611e216a46175_release_v1.2.12_external"] = {
-            sysincludedirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\include]]
-            },
-            linkdirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\lib]]
-            },
-            links = {
-                "zlib"
-            },
-            libfiles = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\z\zlib\v1.2.12\b5ea843dabd742168c9611e216a46175\lib\zlib.lib]]
-            }
-        },
-        ["xmake::boost_2b54c318908f4900a07f01731c1ce602_release_1.79.0_external"] = {
-            sysincludedirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\include]]
-            },
-            links = {
-                "libboost_regex-mt-s",
-                "libboost_system-mt-s",
-                "libboost_atomic-mt-s",
-                "libboost_iostreams-mt-s",
-                "libboost_filesystem-mt-s"
-            },
-            linkdirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib]]
-            },
-            defines = "BOOST_ALL_NO_LIB",
-            libfiles = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_regex-mt-s.lib]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_system-mt-s.lib]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_atomic-mt-s.lib]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_iostreams-mt-s.lib]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\boost\1.79.0\2b54c318908f4900a07f01731c1ce602\lib\libboost_filesystem-mt-s.lib]]
-            }
-        },
-        ["xmake::gtest_188944e346694ce89eb8bc3d2f0b7138_release_1.12.1_external"] = {
-            version = "1.12.1",
-            links = {
-                "gmock",
-                "gtest",
-                "gtest_main"
-            },
-            static = true,
-            linkdirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\lib]]
             },
             sysincludedirs = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\include]]
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\include]]
             },
-            libfiles = {
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\lib\gmock.lib]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\lib\gtest.lib]],
-                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\g\gtest\1.12.1\188944e346694ce89eb8bc3d2f0b7138\lib\gtest_main.lib]]
+            linkdirs = {
+                [[C:\Users\wmdcs\AppData\Local\.xmake\packages\b\blosc\1.21.1\8c39e21c84434beab4f86cf9fbd34f9e\lib]]
             }
         }
-    },
-    find_programver_fetch_package_system = {
-        ["C:\\Program Files\\CMake\\bin\\cmake"] = "3.21.3"
-    },
-    find_program_fetch_package_system = {
-        cmake = [[C:\Program Files\CMake\bin\cmake]]
     },
     find_programver_fetch_package_xmake = {
         ["C:\\Program Files\\CMake\\bin\\cmake"] = "3.21.3"
-    },
-    ["detect.tools.nvcc.has_flags"] = {
-        ["C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc_11.7"] = {
-            ["--dependency-output"] = true,
-            ["--undefine-macro"] = true,
-            ["--no-host-device-move-forward"] = true,
-            ["--linker-options"] = true,
-            ["--no-compress"] = true,
-            ["--list-gpu-code"] = true,
-            ["--clean-targets"] = true,
-            ["--dopt"] = true,
-            ["--gpu-code"] = true,
-            ["--default-stream"] = true,
-            ["-dc"] = true,
-            ["--gpu-architecture"] = true,
-            ["--no-exceptions"] = true,
-            ["--system-include"] = true,
-            ["--generate-dependency-targets"] = true,
-            ["--drive-prefix"] = true,
-            ["--cubin"] = true,
-            ["--optix-ir"] = true,
-            ["--generate-dependencies-with-compile"] = true,
-            ["--lib"] = true,
-            ["--save-temps"] = true,
-            ["--compiler-options"] = true,
-            ["--no-host-device-initializer-list"] = true,
-            ["--include-path"] = true,
-            ["--ftz"] = true,
-            ["-code"] = true,
-            ["--no-device-link"] = true,
-            ["-o"] = true,
-            ["--device-w"] = true,
-            ["--cudart"] = true,
-            ["--expt-relaxed-constexpr"] = true,
-            ["--forward-unknown-to-host-linker"] = true,
-            ["--run-args"] = true,
-            ["--generate-code"] = true,
-            ["--help"] = true,
-            ["--device-debug"] = true,
-            ["-forward-unknown-opts"] = true,
-            ["--verbose"] = true,
-            ["--forward-unknown-to-host-compiler"] = true,
-            ["--Wmissing-launch-bounds"] = true,
-            ["--nvlink-options"] = true,
-            ["--maxrregcount"] = true,
-            ["--dependency-target-name"] = true,
-            ["--fatbin"] = true,
-            ["--Wno-deprecated-declarations"] = true,
-            ["--source-in-ptx"] = true,
-            ["--no-align-double"] = true,
-            ["--resource-usage"] = true,
-            ["--std"] = true,
-            ["-dw"] = true,
-            ["--ftemplate-depth"] = true,
-            ["-forward-unknown-to-host-linker"] = true,
-            ["--ptxas-options"] = true,
-            ["--cuda"] = true,
-            ["--libdevice-directory"] = true,
-            ["--entries"] = true,
-            ["--compile"] = true,
-            ["--diag-warn"] = true,
-            ["--ftemplate-backtrace-limit"] = true,
-            ["--m32"] = true,
-            ["--threads"] = true,
-            ["--ptx"] = true,
-            ["--fmad"] = true,
-            ["--list-gpu-arch"] = true,
-            ["--output-file"] = true,
-            ["--generate-line-info"] = true,
-            ["--relocatable-device-code"] = true,
-            ["--forward-unknown-opts"] = true,
-            ["--options-file"] = true,
-            ["--diag-error"] = true,
-            ["--Wreorder"] = true,
-            ["--shared"] = true,
-            ["--no-display-error-number"] = true,
-            ["--generate-dependencies"] = true,
-            ["--extensible-whole-program"] = true,
-            ["--dont-use-profile"] = true,
-            ["--extended-lambda"] = true,
-            ["--keep"] = true,
-            ["-gencode"] = true,
-            ["-lineinfo"] = true,
-            ["--expt-extended-lambda"] = true,
-            ["--pre-include"] = true,
-            ["--restrict"] = true,
-            ["--define-macro"] = true,
-            ["--dependency-drive-prefix"] = true,
-            ["--library-path"] = true,
-            ["--optimization-info"] = true,
-            ["--keep-device-functions"] = true,
-            ["--output-directory"] = true,
-            ["--optimize"] = true,
-            ["--version-ident"] = true,
-            ["--prec-div"] = true,
-            ["--target-directory"] = true,
-            ["--input-drive-prefix"] = true,
-            ["-bar"] = true,
-            ["--lto"] = true,
-            ["-arch"] = true,
-            ["--library"] = true,
-            ["-dlink"] = true,
-            ["--dryrun"] = true,
-            ["--machine"] = true,
-            ["--extra-device-vectorization"] = true,
-            ["--dlink-time-opt"] = true,
-            ["--device-link"] = true,
-            ["--profile"] = true,
-            ["--Wext-lambda-captures-this"] = true,
-            ["--device-c"] = true,
-            ["--run"] = true,
-            ["--Werror"] = true,
-            ["--version"] = true,
-            ["-forward-unknown-to-host-compiler"] = true,
-            ["--use-local-env"] = true,
-            ["--keep-dir"] = true,
-            ["--display-error-number"] = true,
-            ["--objdir-as-tempdir"] = true,
-            ["-MF"] = true,
-            ["--prec-sqrt"] = true,
-            ["--archiver-binary"] = true,
-            ["-dlto"] = true,
-            ["--compile-as-tools-patch"] = true,
-            ["--debug"] = true,
-            ["--time"] = true,
-            ["--Wno-deprecated-gpu-targets"] = true,
-            ["--diag-suppress"] = true,
-            ["--preprocess"] = true,
-            ["--compiler-bindir"] = true,
-            ["--Wdefault-stream-launch"] = true,
-            ["--link"] = true,
-            ["--x"] = true,
-            ["--archive-options"] = true,
-            ["--allow-unsupported-compiler"] = true,
-            ["--m64"] = true,
-            ["--cudadevrt"] = true,
-            ["--disable-warnings"] = true
-        }
     }
 }
